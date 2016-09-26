@@ -1,0 +1,105 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Contacts - Sydney High School</title>
+    <meta charset="utf-8" />
+    <meta author="Joel Baticz" />
+    <meta keywords="Sydney, High, School, Contacts" />
+    <meta description="Sydney High School's contacts page.'" />
+    <link rel="stylesheet" type="text/css" href="style.css">
+	<script type="text/javascript" src="ValidateForm.js"></script>
+</head>
+<body>
+
+    <div id="bubblestop">
+
+        <div id="container">
+            <header>
+                <img src="globe.png" alt="Logo" />
+                <h1>Sydney High School</h1>
+            </header>
+
+            <!--<div id="floatfix"></div>-->
+
+            <div id="spacer"></div>
+            <nav>
+                <ul>
+                    <a href="home.html"><li id="Home"></li></a>
+                    <a href="contacts.html"><li id="selectedContacts"></li></a>
+                    <a href="aboutus.html"><li id="AboutUs"></li></a>
+					<a href="media.html"><li id="Media"></li></a>
+                </ul>
+            </nav>
+
+            <div id="floatfix"></div>
+
+            <table id="content">
+                <tr>
+                    <td id="top" colspan="3">top</td>
+                </tr>
+                <tr>
+                    <td id="left">left</td>
+                    <td id="content">
+                        <article>
+                            <h2>Contacts - Sydney High School</h2>
+
+							<p>Contact details have been sent. Thank you for taking the time filling the contact form.</p>
+							
+                            <form action="thankyou.html" method="get" onsubmit="return ValidateAll(this)" onreset="return ConfirmReset()">
+                                <fieldset>
+                                    <legend>Contact details</legend>
+
+                                    <div id="labels">
+                                        <label for="name">Name:</label>
+                                        <br />
+                                        <label for="email">Email:</label>
+                                        <br />
+                                        <label for="phone">Phone:</label>
+                                        <br />
+                                        <label for="prefered">Prefered contact method:</label>
+                                        <br />
+                                        <br />
+                                        <label for="DOB">Date of birth:</label>
+                                        <br />
+
+
+                                    </div>
+                                    <div id="controls">
+                                        <input id="name" type="text" class="valid" onblur="return ValidateNonEmpty(this,nameHelp)" autofocus required/><span id="nameHelp"></span><br />
+                                        
+                                        <input id="email" type="text" class="valid" onblur="return ValidateEmail(this,emailHelp)"/><span id="emailHelp"></span><br />
+                                        <input id="phone" type="text" class="valid" onblur="return ValidatePhone(this,phoneHelp)"/><span id="phoneHelp"></span><br />
+										
+										
+                                        <input id="preferedemail" type="radio" name="prefered" value="Email" checked>Email<br />
+                                        <input id="preferedphone" type="radio" name="prefered" value="Phone" unchecked>Phone<br />
+                                        <input id="DOB" type="date" /><br />
+                                    </div>
+                                    <div id="floatfix"></div>
+                                    <input id="button" type="submit" value="Submit" />
+                                    <input id="button" type="reset" value="Reset" />
+									<input id="button" type="button" value="Save" />
+
+                                        
+
+
+</fieldset>
+                            </form>
+                        </article>
+                    </td>
+                    <td id="right">right</td>
+                </tr>
+                <tr>
+                    <td id="bottom" colspan="3">bottom</td>
+                </tr>
+            </table>
+
+
+            <footer>
+                <p>Copyright &copy; by Zsolt Baticz (Joel), 2016</p>
+            </footer>
+
+        </div>
+    </div>
+</body>
+</html>
